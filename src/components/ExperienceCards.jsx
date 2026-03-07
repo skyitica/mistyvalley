@@ -4,7 +4,7 @@ import {
   Pizza,
   Wine,
   Heart,
-  Basket,
+  ShoppingBasket,
   ShoppingCart,
 } from 'lucide-react';
 
@@ -34,7 +34,7 @@ const experiences = [
     desc: 'An unforgettable venue in the Outeniqua Mountains.',
   },
   {
-    icon: Basket,
+    icon: ShoppingBasket,
     title: 'Picnic Escapes',
     desc: 'Curated baskets, mountain views, no itinerary needed.',
   },
