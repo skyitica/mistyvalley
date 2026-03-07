@@ -47,7 +47,7 @@ export default function Hero() {
             Book a Visit
           </a>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }
