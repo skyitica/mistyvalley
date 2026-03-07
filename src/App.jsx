@@ -13,9 +13,14 @@ const ease = [0.22, 1, 0.36, 1];
 
 export default function App() {
   const [introComplete, setIntroComplete] = useState(false);
+  const [logoTransitionDone, setLogoTransitionDone] = useState(false);
 
   const handleIntroComplete = useCallback(() => {
     setIntroComplete(true);
+  }, []);
+
+  const handleLogoTransitionComplete = useCallback(() => {
+    setLogoTransitionDone(true);
   }, []);
 
   return (
@@ -28,7 +33,10 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease }}
           >
-            <Hero />
+            <Hero
+              transitionFromIntro={!logoTransitionDone}
+              onTransitionComplete={handleLogoTransitionComplete}
+            />
             <ExperienceCards />
             <LocationAtmosphere />
             <GinDistillery />
